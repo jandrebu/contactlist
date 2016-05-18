@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<html ng-app="myApp" ng-cloak>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Angular Material style sheet -->
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+
+</head>
+
+	<title>Contact list App</title>
+</head>
+<body>
+
+	<div class="container" ng-controller="AppCtrl">
+		<h1>Contact list App</h1>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Ph. #</th>
+					<th>Action</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><md-input-container><label>name</label><input ng-model="contact.name"></md-input-container></td>
+					<td><md-input-container><label>email</label><input ng-model="contact.email"></md-input-container></td>
+					<td><md-input-container><label>Phone #</label><input ng-model="contact.number"></md-input-container></td>
+					<td><md-button class="md-raised md-primary" ng-click="addContact()">Add Contact</md-button></td>
+					<td><md-button class="md-raised" ng-click="update()">Update</md-button>&nbsp;&nbsp;
+						<md-button class="md-raised md-warn" ng-click="deselect()" >Clear</md-button></td>
+				</tr>
+				<tr ng-repeat="contact in contactlist">
+					<td>{{contact.name}}</td>
+					<td>{{contact.email}}</td>
+					<td>{{contact.number}}</td>
+					<td><md-button class="md-raised md-primary" ng-click="remove(contact._id)">Remove</md-button></td>
+					<td><md-button class="md-raised " ng-click="edit(contact._id)" >Edit</md-button></td>
+				</tr>
+			</tbody>
+		</table>
+
+</div>
+
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>-->
+
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+	<!-- Angular Material Library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+	<script src="controllers/controller.js"></script>
+</body>
+</html>
