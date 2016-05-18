@@ -1,4 +1,4 @@
-On Mac
+Start Up
 
 Start node server
 >node server.js
