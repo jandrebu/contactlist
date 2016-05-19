@@ -1,42 +1,51 @@
-**Start Up**
+##  **Start Up**
 
 Go to project directory
 
-- Start node server
+**Start node server**
+
 node server
 
-- Start mongodb in another terminal
+**Start mongodb in another terminal**
+
 mongod
 
-- View app in browser
-localhost:3000
+**View app in browser**
+
+locsalhost:3000
 
 
-**Installation**
+## **Installation**
 
-- Install Node.js
+**Install Node.js**
+
 Go to: https://nodejs.org/en/download/
 On Mac: easiest to just click on Macintosh Installer and install
 
-- Install Express
+**Install Express**
+
 npm install express
 
-- Install Mongodb
+**Install Mongodb**
+
 With brew https://docs.mongodb.com/master/tutorial/install-mongodb-on-os-x/?_ga=1.257454091.1295667483.1462906445
 update brew
 brew update
 
-- install MongoDB
+**Install MongoDB**
+
 brew install mongodb
 
-- Run Mongo
+**Run Mongo**
+
 mongod
-Note:First time, create directory
+
+*Note: First time, create directory*
 mkdir -p /data/db
 
 
-- Install mongojs (interface between nodejs and mongodb)
+**Install mongojs (interface between nodejs and mongodb)**
 mpm install mongojs
 
-- Install body parser, used by server to parse the body 
+**Install body parser, used by server to parse the body** 
 npm install body-parser
