@@ -29,7 +29,9 @@ npm install express
 **Install Mongodb**
 
 With brew https://docs.mongodb.com/master/tutorial/install-mongodb-on-os-x/?_ga=1.257454091.1295667483.1462906445
+
 update brew
+
 brew update
 
 **Install MongoDB**
@@ -41,11 +43,14 @@ brew install mongodb
 mongod
 
 *Note: First time, create directory*
+
 mkdir -p /data/db
 
 
 **Install mongojs (interface between nodejs and mongodb)**
+
 mpm install mongojs
 
 **Install body parser, used by server to parse the body** 
+
 npm install body-parser
